@@ -1,0 +1,251 @@
+/* ===== Base Layout & Body ===== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  margin:0px auto;
+}
+
+/* ===== Header ===== */
+.fancy-header {
+  background: linear-gradient(135deg, #1b1b1b, #3a3a3a);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.fancy-header nav {
+  margin-top: 1rem;
+}
+
+.fancy-header nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.fancy-header nav a:hover {
+  color: #00c6ff;
+}
+/* ===== Education Card ===== */
+.education-card {
+  background: white;
+  padding: 20px;
+  border-left: 5px solid #007acc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.education-card h3 {
+  margin-top: 0;
+  color: #007acc;
+}
+
+.button-wrapper {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007acc;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #005f99;
+}
+
+/* ===== Footer Contact Links ===== */
+footer a {
+  color: #00c6ff;
+  text-decoration: none;
+}
+
+.img{
+  align-items:start;
+  width: 32px;
+  height: 32px;
+}
+/* ===== Sections ===== */
+.section {
+  padding: 10px 0;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #007acc;
+  text-align: center;
+}
+
+/* ===== Card Grid Layout ===== */
+.card-grid,
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* ===== Project Flip Cards ===== */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.flip-card-front {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.flip-card-front h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.flip-card-back {
+  background: #007acc;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ===== Contact Form Styling ===== */
+.formdesc{
+max-width: 740px;
+margin: 0 auto;
+padding-bottom: 10px;
+}
+
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  padding-right: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007acc;
+  outline: none;
+}
+
+.contact-form button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  background-color: #007acc;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #005f99;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  background: #111;
+  color: white;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+  .fancy-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .card-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+}
